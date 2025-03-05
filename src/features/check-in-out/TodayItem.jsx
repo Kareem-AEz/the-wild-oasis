@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Tag from "../../ui/Tag";
 import { Flag } from "../../ui/Flag";
 import Button from "../../ui/Button";
-import CheckOutButton from "./CheckoutButton";
+import CheckoutButton from "./CheckoutButton";
 import { Link } from "react-router-dom";
 
 const StyledTodayItem = styled.li`
@@ -36,7 +36,7 @@ function TodayItem({ activity }) {
 			/>
 			<Guest>{guests.fullName}</Guest>
 			<div>{numNights} nights</div>
-			{status === "checked-in" && <CheckOutButton bookingId={id} />}
+			{status === "checked-in" && <CheckoutButton bookingId={id} />}
 			{status === "unconfirmed" && (
 				<Button
 					variation="primary"
